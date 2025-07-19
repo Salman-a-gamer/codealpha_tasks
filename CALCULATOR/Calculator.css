@@ -1,0 +1,135 @@
+body {
+    background-color: #384959;
+}
+
+.bar {
+    background-color: #384959;
+    box-shadow: none;
+    border-color: #BDDDFC;
+    width: 455px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: larger;
+}
+
+input.bar::-webkit-inner-spin-button,
+  input.bar::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+button {
+    background-color: #6A89A7;
+    border-color: #BDDDFC;
+    height: 30px;
+    width: 60px;
+    border-radius: 8px;
+    margin-bottom: -30px;
+}
+
+.khatka {
+    margin-top: 20px;
+    margin-left: 5px;
+}
+
+.switch {
+    position: relative;
+    width: 120px;
+    height: 30px;
+    border-radius: 25px;
+    margin-bottom: -25px;
+}
+
+/* Hide native checkbox */
+.switch input {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 120px;
+    height: 30px;
+    border-radius: 25px;
+    background: #1E1E1E;
+    outline: none;
+    position: relative;
+    cursor: pointer;
+    transition: background 0.4s;
+}
+
+/* Labels: "Rad" and "Deg" */
+.switch input::before,
+.switch input::after {
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: bold;
+    font-size: 14px;
+    color: #fff;
+    pointer-events: none;
+}
+
+.switch input::before {
+    content: "Rad";
+    left: 20px;
+}
+
+.switch input::after {
+    content: "Deg";
+    right: 20px;
+}
+
+/* Slider knob */
+.switch label {
+    z-index: 0;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 56px;
+    height: 26px;
+    border-radius: 20px;
+    background: #ff9800;
+    transition: left 0.4s, background 0.3s;
+}
+
+/* When toggled (checked) */
+.switch input:checked {
+    background: #ff9800;
+}
+
+.switch input:checked::before {
+    color: #1E1E1E;
+    transition: color 0.5s;
+}
+
+.switch input:checked::after {
+    color: #fff;
+    transition: color 0.5s 0.2s;
+}
+
+.switch input:checked + label {
+    left: 62px;
+    background: #1E1E1E;
+}
+
+/* When not checked */
+.switch input:not(:checked)::before {
+    color: #fff;
+    transition: color 0.5s;
+}
+
+.switch input:not(:checked)::after {
+    color: #1E1E1E;
+    transition: color 0.5s 0.2s;
+}
+
+.switch input:not(:checked) + label {
+    left: 2px;
+    background: #ff9800;
+}
+
+.spaceneed {
+    margin-left: 128px;
+}
+
+.bracks {
+    margin-top: 20px;
+}
